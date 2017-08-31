@@ -1,5 +1,30 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+    // ****** Block Menu ******
+    
+    nav.navbar.navbar-inverse
+        div.container-fluid
+            div.navbar-header
+                a.navbar-brand(href='/') WebSiteName
+            ul.nav.navbar-nav
+                li.active
+                    a(href='/') Home
+                li
+                    a(href='/') Home
+                    
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='inscription')
+                        span.glyphicon.glyphicon-user
+                        |  Sign Up
+                li
+                    a(href='connexion')
+                        span.glyphicon.glyphicon-log-in
+                        |  Login
+                        
+                        
+    h1 Projet site eCommerce
+    p Bienvenue sur ce site créer par Gilmont Emeric pour le cours de :
+    p Application et système d'entreprise
