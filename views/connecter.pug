@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+    // ****** Block Menu ******
+    
+    nav.navbar.navbar-inverse
+        div.container-fluid
+            div.navbar-header
+                a.navbar-brand(href='/') WebSiteName
+            ul.nav.navbar-nav
+                li.active
+                    a(href='/') Home
+                li
+                    a(href='/') Home
+                    
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='panier')
+                        span.glyphicon.glyphicon-shopping-cart
+                        |  Panier
+                li
+                    a(href='#')
+                        span.glyphicon.glyphicon-log-out
+                        |  Logout
