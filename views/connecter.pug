@@ -26,4 +26,29 @@ block content
                 li
                     a(href='#')
                         span.glyphicon.glyphicon-log-out
-                        |  Logout
+                        |  Se déconnecter
+
+
+    h1 Bienvenue
+
+    // Affichage produits, problème avec image
+
+    .row
+        .col-sm-6.col-md-4
+            img.className#IdName(src="/picturesdb/livrenodejs.png" alt="")
+            .caption
+                h3 Livre NodeJS
+                .clearfix
+                    .price.pull-left Prix : 15 € 
+                        p Quantité : 1
+                    a.btn.btn-success.pull-right(href='#', role='button') Ajouter au panier
+
+    .row
+        .col-sm-6.col-md-4
+            .caption
+                h3 Livre Git
+                .clearfix
+                    .price.pull-left Prix : 15 € 
+                        p Quantité : 1
+                    a.btn.btn-success.pull-right(href='#', role='button') Ajouter au panier
+

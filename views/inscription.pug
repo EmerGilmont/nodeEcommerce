@@ -8,18 +8,16 @@ block content
         div.container-fluid
             div.navbar-header
                 a.navbar-brand(href='/') eCommerce
-            ul.nav.navbar-nav
-                li.active
-                    a(href='/') Produits
+
             ul.nav.navbar-nav.navbar-right
                 li
                     a(href='inscription')
                         span.glyphicon.glyphicon-user
-                        |  Sign Up
+                        |  S'inscrire
                 li
                     a(href='connexion')
                         span.glyphicon.glyphicon-log-in
-                        |  Login
+                        |  Se connecter
                         
     form
         div.form-group
@@ -29,4 +27,4 @@ block content
             label(for='password') Mot de passe
             input#password.form-control(type='password')
             
-        button.btn.btn-default(type='submit') Submit
+        button.btn.btn-success(type='submit') Valider
