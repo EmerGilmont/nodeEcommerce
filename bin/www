@@ -26,6 +26,9 @@ var server = http.createServer(app);
  */
 
 server.listen(port);
+
+// On affiche le port du serveur
+console.log("Le serveur est sur le port: " +server.address().port);
 server.on('error', onError);
 server.on('listening', onListening);
 

@@ -29,12 +29,12 @@ block content
     br
     br
     br
-    form
+    form(name="connexion", method="post", action="/connexion")
         div.form-group
             label(for='account') Nom de compte
-            input#account.form-control(type='account')
+            input#account.form-control(type='account', name="account")
         div.form-group
             label(for='password') Mot de passe
-            input#password.form-control(type='password')
+            input#password.form-control(type='password', name="password")
             
         button.btn.btn-default(type='submit') Submit
