@@ -24,7 +24,7 @@ block content
                         span.glyphicon.glyphicon-shopping-cart
                         |  Panier
                 li
-                    a(href='#')
+                    a(href='/')
                         span.glyphicon.glyphicon-log-out
                         |  Se déconnecter
 
@@ -50,3 +50,8 @@ block content
                                         i.glyphicon.glyphicon-trash
                                     button.btn.btn-default(type='submit' name="decrement" value="1") <
                                     button.btn.btn-default(type='submit' name="increment" value="1") >
+
+    p prix total: #{totalPrice}
+    
+    form(name="paiement", method="post", action="/paiement")
+        button.btn.btn-default(type='submit' name="paiement") Payer

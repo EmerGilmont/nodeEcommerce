@@ -10,24 +10,19 @@ block content
                 a.navbar-brand(href='/') eCommerce
             ul.nav.navbar-nav
                 li.active
-                    a(href='produit') Produits 
-            .col-sm-3.col-md-3
-                form.navbar-form(role='search')
-                    .input-group
-                        input.form-control(type='text', placeholder='Search', name='q')
-                        .input-group-btn
-                            button.btn.btn-default(type='submit')
-                                i.glyphicon.glyphicon-search              
+                    a(href='produit') Produits  
+
+
             ul.nav.navbar-nav.navbar-right
                 li
                     a(href='panier')
                         span.glyphicon.glyphicon-shopping-cart
                         |  Panier
                 li
-                    a(href='#')
+                    a(href='/')
                         span.glyphicon.glyphicon-log-out
                         |  Se déconnecter
 
 
-    h1 Bienvenue 
+    h1 Bienvenue #{name}
 

@@ -19,12 +19,12 @@ block content
                         span.glyphicon.glyphicon-log-in
                         |  Se connecter
                         
-    form
+    form(name="inscription", method="post", action="/addNewUser")
         div.form-group
             label(for='account') Nom de compte
-            input#account.form-control(type='account')
+            input#account.form-control(type='account' name="name")
         div.form-group
             label(for='password') Mot de passe
-            input#password.form-control(type='password')
+            input#password.form-control(type='password' name="password")
             
         button.btn.btn-success(type='submit') Valider
