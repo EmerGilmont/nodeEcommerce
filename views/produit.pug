@@ -1,0 +1,52 @@
+extends layout
+
+block content
+
+    // ****** Block Menu ******
+    
+    nav.navbar.navbar-inverse
+        div.container-fluid
+            div.navbar-header
+                a.navbar-brand(href='/') eCommerce
+            ul.nav.navbar-nav
+                li.active
+                    a(href='produit') Produits 
+            .col-sm-3.col-md-3
+                form.navbar-form(role='search')
+                    .input-group
+                        input.form-control(type='text', placeholder='Search', name='q')
+                        .input-group-btn
+                            button.btn.btn-default(type='submit')
+                                i.glyphicon.glyphicon-search              
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='panier')
+                        span.glyphicon.glyphicon-shopping-cart
+                        |  Panier
+                li
+                    a(href='#')
+                        span.glyphicon.glyphicon-log-out
+                        |  Se déconnecter
+
+
+    h1 Bienvenue
+
+    // Affichage produits
+
+    each test, i in produit
+
+        ul
+            .row
+                .col-sm-6.col-md-4
+                    img.className#IdName(src=test.img width='100px')
+                    .caption
+                        h3 #{test.name}
+                        .clearfix
+                            .price.pull-left Prix : #{test.price}
+                                p Quantité : #{test.quantity}
+                                form(name="produit", method="post", action="/addPanier")
+                                    input(type='hidden' name='name' value=test.name)
+                                    input(type='hidden' name='price' value=test.price)
+                                    input(type='hidden' name='quantity' value=test.quantity)
+                                    input(type='hidden' name='img' value=test.img)
+                                    button.btn.btn-success.pull-right(type='submit') Ajouter au panier

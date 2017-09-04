@@ -1,0 +1,42 @@
+extends layout
+
+block content
+
+    // ****** Block Menu ******
+    
+    nav.navbar.navbar-inverse
+        div.container-fluid
+            div.navbar-header
+                a.navbar-brand(href='/') eCommerce
+            ul.nav.navbar-nav
+                li.active
+                    a(href='/') Accueil
+                    
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='inscription')
+                        span.glyphicon.glyphicon-user
+                        |  S'inscrire
+                li
+                    a(href='connexion')
+                        span.glyphicon.glyphicon-log-in
+                        |  Se connecter
+
+    form(name="addProduct", method="post", action="/addProduct")
+        div.form-group
+            label(for='nameProduct') Nom du produit: 
+            input#account.form-control(type='nameProduct', name="nameProduct")
+
+        div.form-group
+            label(for='priceProduct') Prix du produit: 
+            input#account.form-control(type='priceProduct', name="priceProduct")
+
+        div.form-group
+            label(for='quantityProduct') Quantitée(s) du produit: 
+            input#account.form-control(type='quantityProduct', name="quantityProduct")
+
+        div.form-group
+            label(for='imgProduct') lien de l'image du produit: 
+            input#account.form-control(type='imgProduct', name="imgProduct")
+            
+        button.btn.btn-success(type='submit') Valider

@@ -7,13 +7,17 @@ block content
     nav.navbar.navbar-inverse
         div.container-fluid
             div.navbar-header
-                a.navbar-brand(href='/') WebSiteName
+                a.navbar-brand(href='/') eCommerce
             ul.nav.navbar-nav
                 li.active
-                    a(href='/') Home
-                li
-                    a(href='/') Home
-                    
+                    a(href='produit') Produits 
+            .col-sm-3.col-md-3
+                form.navbar-form(role='search')
+                    .input-group
+                        input.form-control(type='text', placeholder='Search', name='q')
+                        .input-group-btn
+                            button.btn.btn-default(type='submit')
+                                i.glyphicon.glyphicon-search              
             ul.nav.navbar-nav.navbar-right
                 li
                     a(href='panier')
@@ -22,4 +26,8 @@ block content
                 li
                     a(href='#')
                         span.glyphicon.glyphicon-log-out
-                        |  Logout
+                        |  Se déconnecter
+
+
+    h1 Bienvenue 
+
